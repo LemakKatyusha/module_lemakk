@@ -1,39 +1,47 @@
 {
-  "name": "tattooworldlab",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@babel/core": "^7.25.8",
-    "@babel/preset-env": "^7.25.8",
-    "@babel/preset-react": "^7.25.7",
-    "@eslint/js": "^9.12.0",
-    "babel-loader": "^9.2.1",
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.0",
-    "eslint": "^9.12.0",
-    "eslint-plugin-react": "^7.37.1",
-    "globals": "^15.11.0",
-    "html-webpack-plugin": "^5.6.0",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "mini-css-extract-plugin": "^2.9.1",
-    "prettier": "^3.3.3",
-    "style-loader": "^4.0.0",
-    "terser-webpack-plugin": "^5.3.10",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
-  },
-  "dependencies": {
-    "react-dom": "^18.3.1"
-  }
+	"name": "tattooworldlab",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack serve --mode development",
+		"build": "webpack --mode production",
+		"lint": "eslint . --fix --max-warnings=0",
+		"format": "prettier . --write",
+		"prepare": "husky install"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@babel/core": "^7.25.8",
+		"@babel/preset-env": "^7.25.8",
+		"@babel/preset-react": "^7.25.7",
+		"@eslint/js": "^9.12.0",
+		"babel-loader": "^9.2.1",
+		"css-loader": "^7.1.2",
+		"css-minimizer-webpack-plugin": "^7.0.0",
+		"eslint": "^9.12.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-react": "^7.37.1",
+		"globals": "^15.11.0",
+		"html-webpack-plugin": "^5.6.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"mini-css-extract-plugin": "^2.9.1",
+		"prettier": "3.3.3",
+		"style-loader": "^4.0.0",
+		"terser-webpack-plugin": "^5.3.10",
+		"webpack": "^5.95.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.1.0"
+	},
+	"dependencies": {
+		"react-dom": "^18.3.1"
+	},
+	"lint-staged": {
+		"*.js": "eslint --cache --fix",
+		"*.--write": "prettier --write"
+	}
 }
