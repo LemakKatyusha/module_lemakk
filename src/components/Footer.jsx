@@ -1,11 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Footer = () => {
-  return (
-    <footer>
-      <p>&copy; 2024 My Custom React App</p>
-    </footer>
-  );
+const Footer = ({ group }) => {
+	return (
+		<footer>
+			<h1> {group}</h1>
+		</footer>
+	);
 };
-
+Footer.propTypes = {
+	group: PropTypes.string.isRequired,
+};
 export default Footer;
